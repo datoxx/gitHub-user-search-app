@@ -1,13 +1,16 @@
 import styled, {ThemeProvider} from 'styled-components';
 import { lightTheme, darkTheme } from './themes';
-import {  useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
+import Search from './components/Search';
+import Result from './components/Result';
 
 
 
 function App() {
 
   const [theme, setTheme] = useState<boolean>(false)
+  const [searchData, setSearchData] = useState<any|null>(null)
 
 
   return (
@@ -15,6 +18,8 @@ function App() {
       <Wrapper>
           <Container>
             <Header theme={theme} setTheme={setTheme} />
+            <Search setSearchData={setSearchData} />
+            {searchData && <Result searchData={searchData} />}
           </Container>
       </Wrapper>
     </ThemeProvider>
@@ -45,4 +50,3 @@ const Container = styled.div`
     max-width: 730px;
   }
 `
-
