@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import SearchIcon from '../assets/icon-search.svg';
 import {  useEffect, useState } from 'react';
 import axios from 'axios';
+import { UserData } from '../types/models';
+
 
 interface SearchProps {
-  setSearchData: (e:any) => void,
+  setSearchData: (e:UserData|null) => void,
 }
 
 const Search = ({setSearchData}:SearchProps) => {

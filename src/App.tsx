@@ -4,13 +4,14 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Search from './components/Search';
 import Result from './components/Result';
+import { UserData } from './types/models';
 
 
 
 function App() {
 
   const [theme, setTheme] = useState<boolean>(false)
-  const [searchData, setSearchData] = useState<any|null>(null)
+  const [searchData, setSearchData] = useState<UserData|null>(null)
 
 
   return (
