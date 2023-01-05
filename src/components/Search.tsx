@@ -77,6 +77,20 @@ const Form = styled.form`
       height: 20px;
     }
 
+  @media (min-width: 768px) {
+    gap: 24px; 
+    height: 69px; 
+    margin: 36px 0 24px;
+    padding: 0 10px 0 32px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    label {
+      gap: 24px; 
+  }
+  }
+
 `
 
 
@@ -92,6 +106,14 @@ const SearchInput = styled.input`
     line-height: 25px; 
     color: ${props => props.theme.placeholderColor};
   }
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+      &::placeholder {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
 `
 
 const Span = styled.div`
@@ -100,11 +122,15 @@ const Span = styled.div`
   line-height: 22px;
   white-space: nowrap;
   color: #F74646;
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 22px;
+  }
 
 `
 
 const Button = styled.button`
-    all: unset;
+  all: unset;
   background-color: #0079FF;
   transition: background-color 0.3s ease-in-out;
   padding: 12px 16px;
@@ -118,5 +144,8 @@ const Button = styled.button`
     cursor: pointer;
     background: #60ABFF;
     
+  }
+  @media screen and (min-width: 768px) {
+    padding: 13px 24px;
   }
 `

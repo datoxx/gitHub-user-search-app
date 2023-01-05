@@ -95,13 +95,28 @@ const UserInfoContainer = styled.div`
         width: 70px;
         height: 70px;
         border-radius: 50%;
+    }
+  @media (min-width: 768px) {
+    gap: 41px;
+    img {
+      width: 117px;
+      height: 117px;
+    }
   }
+
 `
 
 const UserName = styled.div`
     display: flex;
     flex-direction: column;
     gap: 6px;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        width: 100%;
+  }
 `
 
 const Name = styled.h2`
@@ -109,6 +124,10 @@ const Name = styled.h2`
     font-size: 16px;
     line-height: 24px;
     color: ${props => props.theme.boldColor};
+    @media (min-width: 768px) {
+      font-size: 26px;
+      line-height: 39px;
+    }
 
 `
 
@@ -117,12 +136,23 @@ const Login = styled.p`
     font-size: 13px;
     line-height: 19px;
     color: #0079FF;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
 `
 const CreateTime = styled.span`
     font-weight: 400;
     font-size: 13px;
     line-height: 25px;
     color: ${props => props.theme.toggleColor};
+    @media (min-width: 768px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    @media (min-width: 1024px) {
+      white-space: nowrap;
+    }
 `
 
 const Bio = styled.p`
@@ -131,6 +161,10 @@ const Bio = styled.p`
     line-height: 25px;
     color: ${props => props.theme.placeholderColor};
     margin-top: 33px;
+    @media (min-width: 768px) {
+        margin-top: 24px;
+        font-size: 15px;
+    }
 `
 
 const UserStatistics = styled.div`
@@ -165,18 +199,44 @@ const UserStatistics = styled.div`
         text-transform: uppercase;
         color: ${props => props.theme.boldColor};
     }
+
+    @media (min-width: 768px) {
+        margin-top: 32px;
+        padding: 15px 32px;
+        p {
+            font-size: 13px;
+            line-height: 19px;
+        }
+        span {
+            font-size: 22px;
+            line-height: 33px;
+        }
+    }
 `
 
 
 
 const ContactContainer = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
     gap: 17px;
     margin-top: 24px;
     div {
         display: flex;
         gap: 13px;
+    }
+
+    @media  (min-width: 768px) {
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
+        div {
+             gap: 19px;
+        }
+    }
+
+    @media  (min-width: 1024px) {
+        margin-top: 37px;
     }
 `
 
@@ -185,6 +245,10 @@ const ContactText =  styled.p`
     font-size: 13px;
     line-height: 19px;
     color: ${props => props.theme.placeholderColor};
+    @media  (min-width: 768px) {
+        font-size: 15px;
+        line-height: 22px;
+    }
 
 `
 const GitHubLInk = styled.a`
