@@ -19,6 +19,7 @@ const Search = ({setSearchData}:SearchProps) => {
       try {
         const data = await axios.get(`https://api.github.com/users/${user}`);
         setSearchData(data.data);
+        setError(false)
         console.log(data)
       } catch(e) {
         setError(true)
